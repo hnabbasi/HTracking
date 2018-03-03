@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HTracking.Data", "HTracking
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HTracking.Models", "HTracking.Models\HTracking.Models.csproj", "{048D81E5-2004-4F8B-BF90-B5E5C47F9053}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HTracking.Services", "HTracking.Services\HTracking.Services.csproj", "{A3FEA85C-D877-4018-9849-0A378190D83E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,5 +27,9 @@ Global
 		{048D81E5-2004-4F8B-BF90-B5E5C47F9053}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{048D81E5-2004-4F8B-BF90-B5E5C47F9053}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{048D81E5-2004-4F8B-BF90-B5E5C47F9053}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3FEA85C-D877-4018-9849-0A378190D83E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3FEA85C-D877-4018-9849-0A378190D83E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3FEA85C-D877-4018-9849-0A378190D83E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3FEA85C-D877-4018-9849-0A378190D83E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
