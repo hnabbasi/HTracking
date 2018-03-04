@@ -22,7 +22,7 @@ namespace HTracking.Controllers
         public IActionResult Index()
         {
             var forms = _apiService.GetForms();
-            return View();
+            return View(forms);
         }
     }
 }

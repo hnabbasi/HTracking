@@ -1,4 +1,22 @@
-﻿@{
+﻿@model IList<HTracking.Models.BaseForm>
+
+@{
     ViewData["Title"] = "Forms";
 }
 <h1>Forms</h1>
+<table>
+    <tr>
+        <td>Id</td>
+        <td>Name</td>
+    </tr>
+    @for(var i = 0; i< @Model.Count; i++) {
+        <tr>
+            <td>@Model[i].Id</td>
+            <td>@Model[i].Name</td>
+        </tr>
+    }
+    
+</table>
+<p>
+    Forms found: @Model.Count
+</p>
