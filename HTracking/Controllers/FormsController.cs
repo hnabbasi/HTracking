@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using HTracking.Models;
 using HTracking.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -21,8 +22,34 @@ namespace HTracking.Controllers
         // GET: /<controller>/
         public IActionResult Index()
         {
-            var forms = _apiService.GetForms();
+            var forms = _apiService.GetForms<BaseForm>();
             return View(forms);
+        }
+
+        [HttpGet("new-site")]
+        public IActionResult NewSiteForm()
+        {
+            return View();
+        }
+
+        [HttpPost("new-site")]
+        public IActionResult NewSiteForm(SiteForm model)
+        {
+            _apiService.SubmitForm(model);
+            return Index();// View();
+        }
+
+        [HttpGet("new-inventory")]
+        public IActionResult NewInventoryForm()
+        {
+            return View();
+        }
+
+        [HttpPost("new-inventory")]
+        public IActionResult NewInventoryForm(InventoryForm model)
+        {
+            _apiService.SubmitForm(model);
+            return Index();// View();
         }
     }
 }

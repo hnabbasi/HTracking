@@ -1,0 +1,18 @@
+﻿@model HTracking.Models.InventoryForm
+@{
+    ViewData["Title"] = "New Inventory Form";
+}
+<h1>@ViewBag.Title</h1>
+
+<div id="the-form">
+    <form method="post">
+        <label asp-for="Name">Chemicals Inventory Form</label>
+        <input hidden="true" asp-for="Name" value="Chemicals Inventory Form"/>
+        <br/>
+        <label asp-for="ChemicalName">Chemical Name</label>
+        <br/>
+        <input asp-for="ChemicalName"/>
+        <br/>
+        <input type="submit" value="Submit"/>
+    </form>
+</div>

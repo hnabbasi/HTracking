@@ -3,7 +3,9 @@
 @{
     ViewData["Title"] = "Forms";
 }
-<h1>Forms</h1>
+<h1>@ViewBag.Title</h1>
+<a asp-controller="Forms" asp-action="NewSiteForm">Submit Site Form</a>
+<a asp-controller="Forms" asp-action="NewInventoryForm">Submit Inventory Form</a>
 <table>
     <tr>
         <td>Id</td>

@@ -7,8 +7,8 @@ namespace HTracking.Services
 {
     public interface IApiService 
     {
-        IList<BaseForm> GetForms();
-        void SubmitForm(BaseForm form);
+        IList<T> GetForms<T>() where T : BaseForm;
+        void SubmitForm<T>(T form) where T : BaseForm;
     }
 
     public class ApiService : IApiService
@@ -20,14 +20,14 @@ namespace HTracking.Services
             _dataService = dataService;
         }
 
-        public IList<BaseForm> GetForms()
+        public IList<T> GetForms<T>() where T : BaseForm
         {
-            return _dataService.GetForms();
+            return _dataService.GetForms<T>();
         }
 
-        public void SubmitForm(BaseForm form)
+        public void SubmitForm<T>(T form) where T : BaseForm
         {
-            _dataService.SubmitForm(form);
+            _dataService.SubmitForm<T>(form);
         }
     }
 }
